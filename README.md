@@ -86,4 +86,14 @@ This is the place for you to write reflections:
 
 #### Reflection Subscriber-1
 
+1) Using `RwLock<>` to synchronize access to the list of notifications is necessary to ensure thread safety in scenarios where multiple threads may concurrently read or write to the list. `Mutex<>` on the other hand can only access one thread at a time.
+
+2) Because Rust want to takes a different approach by enforcing immutability of static variables to promote safety, concurrency, and predictability in code.
+
 #### Reflection Subscriber-2
+
+1) No I have not. Because I don't know how about it.
+
+2) In the observer pattern, the publisher does not need to know the specific types of its subscribers. Instead, it interacts with them through an interface, allowing new subscribers to be added without modifying the publisher's code. Spawning more than one instance on the main app will be easy enough with observer pattern
+
+3) No I have not.
